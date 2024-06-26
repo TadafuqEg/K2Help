@@ -17,7 +17,7 @@ use Str;
 use File;
 
 class UserController extends Controller
-{
+{//done
     public function index(Request $request)
     {  
 
@@ -71,7 +71,7 @@ class UserController extends Controller
 
     }
  
-    
+
     public function edit($id){
         $user=User::where('id',$id)->first();
         return view('website.users.user.edit',compact('user'));
