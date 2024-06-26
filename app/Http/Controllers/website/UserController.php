@@ -70,7 +70,8 @@ class UserController extends Controller
           return redirect('/users');
 
     }
-
+ 
+    
     public function edit($id){
         $user=User::where('id',$id)->first();
         return view('website.users.user.edit',compact('user'));
