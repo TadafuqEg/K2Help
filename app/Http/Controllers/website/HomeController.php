@@ -70,11 +70,11 @@ class HomeController extends ApiController
 
             $FAQs=FAQ::orderBy('id','desc')->paginate(10);
         } 
-        return view('website.FAQs.index',compact('FAQs'));
+        return view('website.FAQS.index',compact('FAQs'));
     }
 
     public function create_FAQ(){
-        return view('website.FAQs.FAQ.create');
+        return view('website.FAQS.FAQ.create');
     }
 
     public function store_FAQ(Request $request){
@@ -107,7 +107,7 @@ class HomeController extends ApiController
 
     public function edit_FAQ($id){
         $FAQ=FAQ::where('id',$id)->first();
-        return view('website.FAQs.FAQ.edit',compact('FAQ'));
+        return view('website.FAQS.FAQ.edit',compact('FAQ'));
     }
 
     public function update_FAQ(Request $request,$id){
