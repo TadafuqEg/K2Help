@@ -6,7 +6,7 @@ use App\Http\Controllers\website\UserController;
 use App\Http\Controllers\website\LocationController;
 use App\Http\Controllers\website\HomeController;
 use App\Http\Controllers\website\CommunityController;
-use App\Http\Controllers\website\settingController;
+use App\Http\Controllers\website\SettingController;
 /*
 /*
 |--------------------------------------------------------------------------
@@ -88,7 +88,7 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/create_replay', [CommunityController::class, 'create_replay'])->name('create_replay');
     Route::post('/update_replay', [CommunityController::class, 'update_replay'])->name('update_replay');
     //////////////////////////////////////////////
-    Route::get('/settings',[settingController::class,'index'])->name('settings');
-    Route::get('/setting/edit/{id}', [settingController::class, 'edit_setting'])->name('edit.setting');
-    Route::post('/setting/update/{id}', [settingController::class, 'update_setting'])->name('update.setting');
+    Route::get('/settings',[SettingController::class,'index'])->name('settings');
+    Route::get('/setting/edit/{id}', [SettingController::class, 'edit_setting'])->name('edit.setting');
+    Route::post('/setting/update/{id}', [SettingController::class, 'update_setting'])->name('update.setting');
 });
